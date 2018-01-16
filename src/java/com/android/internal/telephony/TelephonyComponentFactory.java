@@ -60,6 +60,7 @@ public class TelephonyComponentFactory {
                 sInstance = (TelephonyComponentFactory) custMethod.newInstance();
                 Rlog.i(LOG_TAG, "Using QtiTelephonyComponentFactory");
             } catch (NoClassDefFoundError | ClassNotFoundException e) {
+                //e.printStackTrace();
                 Rlog.e(LOG_TAG, "QtiTelephonyComponentFactory not used - fallback to default");
                 sInstance = new TelephonyComponentFactory();
             } catch (Exception  e) {
