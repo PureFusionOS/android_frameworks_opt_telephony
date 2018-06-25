@@ -1239,11 +1239,6 @@ public class DcTracker extends Handler {
         return cdmaSubscriptionSource == CdmaSubscriptionSourceManager.SUBSCRIPTION_FROM_NV;
     }
 
-    private boolean isNvSubscription() {
-        int cdmaSubscriptionSource = CdmaSubscriptionSourceManager.getDefault(mPhone.getContext());
-        return cdmaSubscriptionSource == CdmaSubscriptionSourceManager.SUBSCRIPTION_FROM_NV;
-    }
-
     /**
      * Check if it is allowed to make a data connection (without checking APN context specific
      * conditions).
